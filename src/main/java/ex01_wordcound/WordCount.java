@@ -12,7 +12,7 @@ import java.io.Reader;
  */
 public class WordCount {
     public static void main(String[] args) throws Exception {
-        int lineCounter = 1; // if there is at least one char we already have 1 line
+        int lineCounter = 1; // because last line has no newline char
         int wordCounter = 1; // if there is at least one letter we already have 1 word
         boolean lastCharacterWasLetter = false;
         int symbolCounter = 0;
@@ -33,6 +33,7 @@ public class WordCount {
                 wordCounter++;
                 lastCharacterWasLetter = false;
             }
+
             System.out.println("int: " + singleCharacter + ", char: " + (char) singleCharacter);
         }
         reader.close();
