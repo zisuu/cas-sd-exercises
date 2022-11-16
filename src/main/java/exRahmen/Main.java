@@ -1,6 +1,7 @@
 package exRahmen;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		List<Person> liste = new ArrayList<>();
 		for (double d : numbers) {
-			liste.add(new Person("Max", "Muster",d));
+			liste.add(new Person("Max", "Muster", d));
 		}
 		Pair<Person> pair = minMax(liste);
 		System.out.println(pair.getFirstValue().getName() + ": " + pair.getFirstValue().getMeasure());
@@ -19,7 +20,16 @@ public class Main {
 
 	private static <T extends Measurable> Pair<T> minMax(List<T> liste) {
 		T minValue = liste.get(0);
-		T maxValue = liste.get(1);
+		T maxValue = liste.get(0);
+		for(T item: liste) {
+			if (minValue.getMeasure() > item.getMeasure()) {
+				minValue = item;
+			}
+			if (maxValue.getMeasure() < item.getMeasure()) {
+				maxValue = item;
+			}
+		}
+
 		Pair<T> result = new Pair<>(minValue, maxValue);
 		return result;
 	}

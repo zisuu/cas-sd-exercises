@@ -16,4 +16,9 @@ public class Person implements Measurable {
 	public double getMeasure() {
 		return measure;
 	}
+
+	@Override
+	public boolean smallerThan(Measurable other) {
+		return false;
+	}
 }
