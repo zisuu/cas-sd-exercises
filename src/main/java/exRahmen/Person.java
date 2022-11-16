@@ -1,6 +1,6 @@
 package exRahmen;
 
-public class Person implements Measurable {
+public class Person implements Measurable, Comparable {
 	private String name;
 	private double measure;
 

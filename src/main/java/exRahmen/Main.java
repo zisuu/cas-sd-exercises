@@ -1,7 +1,6 @@
 package exRahmen;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -33,8 +32,6 @@ public class Main {
 		Pair<T> result = new Pair<>(minValue, maxValue);
 		return result;
 	}
-
-
 }
 
 
