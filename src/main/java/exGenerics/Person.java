@@ -1,4 +1,4 @@
-package exRahmen;
+package exGenerics;
 
 public class Person implements Measurable, Comparable {
 	private String name;

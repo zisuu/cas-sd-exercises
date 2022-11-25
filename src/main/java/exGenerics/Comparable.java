@@ -1,4 +1,4 @@
-package exRahmen;
+package exGenerics;
 
 public interface Comparable<Person> {
 

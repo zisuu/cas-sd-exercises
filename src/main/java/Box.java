@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Box<T> {
+public class Box<T extends Comparable<T>> {
     private T content;
     public Box(T content) {
         this.content = content;
@@ -8,9 +8,8 @@ public class Box<T> {
     public T getContent() {
         return this.content;
     }
-    public static void main(String[] args){
-        String[] test = {"Max Moser", "Hans Fischer"};
-        Box<String[]> box = new Box<>(test);
-        System.out.println(Arrays.stream(box.getContent()).toList());
+
+    public int compareTo (T o) {
+        return content.compareTo(o);
     }
 }

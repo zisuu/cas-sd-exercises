@@ -1,4 +1,4 @@
-package exRahmen;
+package exGenerics;
 
 import java.util.ArrayList;
 import java.util.List;
